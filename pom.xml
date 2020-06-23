@@ -73,7 +73,7 @@
 							<showWarnings>true</showWarnings>
 							<compilerArgs>
 								<arg>-XDcompilePolicy=simple</arg>
-								<arg>-Xplugin:ErrorProne -Xep:Piranha:WARN -XepPatchChecks:Piranha -XepPatchLocation:IN_PLACE -XepOpt:Piranha:FlagName=Demo -XepOpt:Piranha:IsTreated=true -XepOpt:Piranha:Config=config/piranha.json</arg>
+								<arg>-Xplugin:ErrorProne -Xep:Piranha:WARN -XepPatchChecks:Piranha -XepPatchLocation:IN_PLACE -XepOpt:Piranha:FlagName=${FlagName} -XepOpt:Piranha:IsTreated=true -XepOpt:Piranha:Config=config/piranha.json</arg>
 							</compilerArgs>
 							<annotationProcessorPaths>
 								<path>

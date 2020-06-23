@@ -17,5 +17,5 @@ http://unleash.herokuapp.com/
 ### ¤ Run Piranha magic
 
 ```sh
-mvn clean compile -Ppiranha
+mvn clean compile -Ppiranha -DFlagName=Demo
 ```
