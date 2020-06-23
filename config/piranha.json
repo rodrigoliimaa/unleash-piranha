@@ -7,6 +7,13 @@
       "returnType": "boolean",
       "receiverType": "no.finn.unleash.Unleash",
       "argumentIndex": 0
+    },
+    {
+      "methodName": "getVariant",
+      "flagType": "treated",
+      "returnType": "no.finn.unleash.Variant",
+      "receiverType": "no.finn.unleash.Unleash",
+      "argumentIndex": 0
     }
   ],
   "linkURL": "http://unleash.herokuapp.com/"

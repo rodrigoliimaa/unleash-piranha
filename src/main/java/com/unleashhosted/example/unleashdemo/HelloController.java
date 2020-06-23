@@ -36,7 +36,13 @@ public class HelloController {
                 .sessionId(session.getId())
                 .build();
 
-        Variant variant = unleash.getVariant("VariantExample", context);
-        return "variant selected: " + variant.getName();
+        Variant variant = unleash.getVariant("DemoVariant", context);
+
+        switch (variant.getName()) {
+            case "red": return "You are sad and red";
+            case "green": return "You are the green";
+            case "blue": return "You are so blue";
+            default: return "You got nothing";
+        }
     }
 }
