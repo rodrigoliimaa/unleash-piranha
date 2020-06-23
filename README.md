@@ -19,3 +19,5 @@ http://unleash.herokuapp.com/
 ```sh
 mvn clean compile -Ppiranha -DFlagName=Demo
 ```
+
+Running the above example will refactor all usage of the feature flag with identifier "Demo".
