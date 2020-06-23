@@ -60,7 +60,7 @@
 	</build>
 	<profiles>
 		<profile>
-			<id>analyze</id>
+			<id>piranha</id>
 			<build>
 				<plugins>
 					<plugin>
