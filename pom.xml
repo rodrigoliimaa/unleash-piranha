@@ -56,33 +56,42 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.8.0</version>
-				<configuration>
-					<source>11</source>
-					<target>11</target>
-					<showWarnings>true</showWarnings>
-					<compilerArgs>
-						<arg>-XDcompilePolicy=simple</arg>
-						<arg>-Xplugin:ErrorProne -Xep:Piranha:WARN -XepPatchChecks:Piranha -XepPatchLocation:IN_PLACE -XepOpt:Piranha:FlagName=SAMPLE_STALE_FLAG -XepOpt:Piranha:IsTreated=true -XepOpt:Piranha:Config=config/properties.json</arg>
-					</compilerArgs>
-					<annotationProcessorPaths>
-						<path>
-							<groupId>com.uber.piranha</groupId>
-							<artifactId>piranha</artifactId>
-							<version>0.1.0</version>
-						</path>
-						<path>
-							<groupId>com.google.errorprone</groupId>
-							<artifactId>error_prone_core</artifactId>
-							<version>2.3.2</version>
-						</path>
-					</annotationProcessorPaths>
-				</configuration>
-			</plugin>
 		</plugins>
 	</build>
+	<profiles>
+		<profile>
+			<id>analyze</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-compiler-plugin</artifactId>
+						<version>3.8.0</version>
+						<configuration>
+							<source>11</source>
+							<target>11</target>
+							<showWarnings>true</showWarnings>
+							<compilerArgs>
+								<arg>-XDcompilePolicy=simple</arg>
+								<arg>-Xplugin:ErrorProne -Xep:Piranha:WARN -XepPatchChecks:Piranha -XepPatchLocation:IN_PLACE -XepOpt:Piranha:FlagName=Demo -XepOpt:Piranha:IsTreated=true -XepOpt:Piranha:Config=config/piranha.json</arg>
+							</compilerArgs>
+							<annotationProcessorPaths>
+								<path>
+									<groupId>com.uber.piranha</groupId>
+									<artifactId>piranha</artifactId>
+									<version>0.1.0</version>
+								</path>
+								<path>
+									<groupId>com.google.errorprone</groupId>
+									<artifactId>error_prone_core</artifactId>
+									<version>2.4.0</version>
+								</path>
+							</annotationProcessorPaths>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
 
 </project>

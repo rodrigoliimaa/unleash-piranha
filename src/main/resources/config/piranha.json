@@ -1,0 +1,13 @@
+{
+  "methodProperties":
+  [
+    {
+      "methodName": "isEnabled",
+      "flagType": "treated",
+      "returnType": "boolean",
+      "receiverType": "no.finn.unleash.Unleash",
+      "argumentIndex": 0
+    }
+  ],
+  "linkURL": "http://unleash.herokuapp.com/"
+}
