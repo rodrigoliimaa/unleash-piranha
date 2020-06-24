@@ -21,8 +21,7 @@ public class HelloController {
                 .sessionId(session.getId())
                 .build();
 
-        boolean isEnabled = unleash.isEnabled("Demo", context);
-        if(unleash.isEnabled("Demo")) {
+        if(unleash.isEnabled("Demo", context)) {
             return "Greeting, Demo flag is enabled";
         } else {
             return "Doh, Demo was disabled.";
