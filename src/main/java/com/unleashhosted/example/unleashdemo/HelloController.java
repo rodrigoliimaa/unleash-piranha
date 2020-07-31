@@ -21,7 +21,7 @@ public class HelloController {
                 .sessionId(session.getId())
                 .build();
         
-        if(unleash.isEnabled("Demo", context)) {
+        if(unleash.isEnabled("cloroquina", context)) {
             return "Cloroquina ta ativada";
         } else {
             return "Cloroquina ta desativada.";
