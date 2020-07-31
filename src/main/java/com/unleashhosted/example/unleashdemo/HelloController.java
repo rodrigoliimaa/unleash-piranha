@@ -20,14 +20,13 @@ public class HelloController {
         UnleashContext context = UnleashContext.builder()
                 .sessionId(session.getId())
                 .build();
-
+        
         if(unleash.isEnabled("Demo", context)) {
-            return "Greeting, Demo flag is enabled";
+            return "Cloroquina ta ativada";
         } else {
-            return "Doh, Demo was disabled.";
+            return "Cloroquina ta desativada.";
         }
     }
-
 
     @RequestMapping("/variants")
     public String variants(HttpSession session) {
@@ -35,13 +34,13 @@ public class HelloController {
                 .sessionId(session.getId())
                 .build();
 
-        String variantName = unleash.getVariant("DemoVariant", context).getName();
+        String variantName = unleash.getVariant("CloroquinaVariant", context).getName();
 
         switch (variantName) {
-            case "red": return "You are sad and red";
-            case "green": return "You are the green";
-            case "blue": return "You are so blue";
-            default: return "You got nothing";
+            case "red": return "1000mg";
+            case "green": return "200mg";
+            case "blue": return "400mg";
+            default: return "Você não tomou ainda";
         }
     }
 }

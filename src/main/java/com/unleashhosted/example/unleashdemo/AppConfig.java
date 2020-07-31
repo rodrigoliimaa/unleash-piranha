@@ -12,7 +12,7 @@ public class AppConfig {
     @Bean
     Unleash unleash()  {
         UnleashConfig config = UnleashConfig.builder()
-                .appName("unleash-java-demo")
+                .appName("coronga")
                 .unleashAPI("http://unleash.herokuapp.com/api/")
                 .synchronousFetchOnInitialisation(true)
                 .build();
